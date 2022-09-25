@@ -42,6 +42,7 @@ while(1) {
             break;
     }
 }
+printf("Thanks for playing\n");
 endwin();
 }
 
