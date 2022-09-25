@@ -9,7 +9,6 @@
 
 void init_board(int board[][HEIGHT]);
 void read_file(int board[][HEIGHT]);
-void randomize_board(int board[][HEIGHT]);
 void print(int board[][HEIGHT]);
 int adjacment_to(int board[][HEIGHT], int i, int j);
 int xadd(int i, int a);
@@ -22,8 +21,9 @@ char input_buttons;
 int tmp;
 int board[WIDTH][HEIGHT];
 
-printf("*WELCOME TO THE GAME OF LIFE*\n");
-printf("To select the game speed, press + to increase speed - to slow down\n");
+printf("\n------WELCOME TO THE GAME OF LIFE------\n\n");
+printf("To adjust the GAME SPEED: \nPRESS + to increase speed; \nPRESS - to slow down\n\n");
+printf("PRESS Control+Z to EXIT the program\n\n");
 init_board(board);
 read_file(board);
 button_settings();
@@ -31,18 +31,17 @@ while(1) {
     clear();
     print(board);
     play(board);
-    usleep(300000 + tmp);
+    usleep(400000 + tmp);
     input_buttons = getch();
     switch (input_buttons) {
-        case 's':
-            tmp = 5000;
+        case '-':
+            tmp = 10000;
             break;
-        case 'w':
-            tmp -= 5000;
+        case '+':
+            tmp -= 10000;
             break;
     }
 }
-printf("Thanks for playing\n");
 endwin();
 }
 
@@ -68,7 +67,7 @@ printf("1 - STILL LIFES\n");
 printf("2 - OSCILLATORS\n");
 printf("3 - SPACESHIP & GLIDER\n");
 printf("4 - GLIDER GUN\n");
-printf("5 - STILL LIFES\n");
+printf("5 - TWO STARS\n");
 printf("------Waiting for  input------\n");
 scanf("%d", &KeyEnter);
 
