@@ -1,4 +1,5 @@
 # Game of Life in C Language
+> 25.07.2022
 
 ## This is a learning project, so it's no longer supported!
 
