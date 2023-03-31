@@ -8,7 +8,8 @@ Provide for original initialization of the "game" state via stdin. Prepare at le
 
 ## Important notes:
 
-* The game must be written in C, have a structured style, and run from the terminal; 
+* The game must be written in C, have a structured style, and run from the terminal with command:
+  - `gcc -Wall -Werror -Wextra -lncurses game_of_life.c ` 
   
 * Your source code will be tested by the static analyzer `cppcheck`, as well as the style linter `cpplint`. 
   
